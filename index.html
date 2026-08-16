@@ -3,76 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prashansa Agrawal — Portfolio</title>
+<title>Prashansa Agrawal — Staff Software Engineer | AI & Distributed Systems</title>
+<meta name="description" content="Portfolio of Prashansa Agrawal, Staff Software Engineer focused on distributed systems, cloud-native platforms and AI-powered applications.">
 <style>
-  :root{
-    --bg: #0b0f17;
-    --bg-panel: #0e1420;
-    --line: #212a3a;
-    --text: #eef1f6;
-    --text-muted: #8a93a8;
-    --text-dim: #5c6478;
-    --accent: #55c2e8;
-    --accent-soft: rgba(85, 194, 232, 0.12);
-    --font-display: "Sora", "Segoe UI", system-ui, sans-serif;
-    --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
-  }
-
+  :root{--bg:#0b0f17;--line:#212a3a;--text:#eef1f6;--muted:#8a93a8;--dim:#5c6478;--accent:#55c2e8;--accent-soft:rgba(85,194,232,.12);--display:"Sora","Segoe UI",system-ui,sans-serif;--body:"Inter","Segoe UI",system-ui,sans-serif}
   @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
-
-  *{ box-sizing: border-box; margin:0; padding:0; }
-  html{ scroll-behavior: smooth; }
-  body{ background: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-  a{ color: inherit; text-decoration: none; }
-  .layout{ display: grid; grid-template-columns: 340px 1fr; max-width: 1240px; margin: 0 auto; min-height: 100vh; }
-  .sidebar{ position: sticky; top: 0; align-self: start; height: 100vh; padding: 64px 40px 40px 0; display: flex; flex-direction: column; border-right: 1px solid var(--line); }
-  .avatar{ width: 88px; height: 88px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #2c5f76); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:800; font-size:30px; color:#06141f; letter-spacing:1px; border:3px solid var(--line); }
-  .name{ font-family:var(--font-display); font-weight:800; font-size:34px; letter-spacing:-0.02em; margin-top:22px; line-height:1.15; }
-  .role{ font-family:var(--font-display); font-weight:600; font-size:16px; color:var(--accent); margin-top:8px; }
-  .tagline{ color:var(--text-muted); font-size:14.5px; margin-top:14px; max-width:26ch; }
-  nav{ margin-top:46px; display:flex; flex-direction:column; gap:2px; }
-  nav a{ position:relative; display:flex; align-items:center; gap:14px; padding:11px 4px; font-family:var(--font-display); font-size:12.5px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-dim); transition:color 0.2s ease; }
-  nav a .bar{ width:22px; height:1.5px; background:var(--text-dim); transition:all 0.25s ease; }
-  nav a:hover{ color:var(--text-muted); } nav a:hover .bar{ background:var(--text-muted); }
-  nav a.active{ color:var(--text); } nav a.active .bar{ width:32px; background:var(--accent); }
-  .socials{ margin-top:auto; display:flex; gap:18px; padding-top:40px; }
-  .socials a{ width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; color:var(--text-muted); border:1px solid var(--line); transition:all 0.2s ease; }
-  .socials a:hover{ color:var(--accent); border-color:var(--accent); background:var(--accent-soft); }
-  .socials svg{ width:17px; height:17px; }
-  main{ padding:80px 56px 120px 56px; }
-  section{ display:none; } section.active{ display:block; animation:fadeUp 0.4s ease; }
-  @keyframes fadeUp{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
-  h1.section-title{ font-family:var(--font-display); font-weight:800; font-size:30px; letter-spacing:-0.01em; margin-bottom:34px; }
-  .prose p{ color:var(--text-muted); font-size:16.5px; margin-bottom:22px; max-width:68ch; }
-  .prose strong{ color:var(--text); font-weight:600; }
-  .prose a.inline-link{ color:var(--accent); border-bottom:1px solid rgba(85,194,232,0.35); }
-  .prose a.inline-link:hover{ border-color:var(--accent); }
-  .card-list{ display:flex; flex-direction:column; gap:0; }
-  .card{ display:block; padding:26px 0; border-bottom:1px solid var(--line); }
-  .card:first-child{ padding-top:0; }
-  .card-top{ display:flex; justify-content:space-between; align-items:baseline; gap:20px; margin-bottom:8px; }
-  .card-title-row{ display:flex; align-items:center; gap:10px; }
-  .card-title{ font-family:var(--font-display); font-weight:700; font-size:18px; color:var(--text); }
-  a.card-link .card-title{ transition:color 0.2s ease; } a.card-link:hover .card-title{ color:var(--accent); }
-  .gh-icon{ width:16px; height:16px; color:var(--text-dim); flex-shrink:0; transition:color 0.2s ease; } a.card-link:hover .gh-icon{ color:var(--accent); }
-  .card-date{ font-size:13px; color:var(--text-dim); white-space:nowrap; font-family:var(--font-display); letter-spacing:0.04em; }
-  .card-desc{ color:var(--text-muted); font-size:15px; max-width:65ch; }
-  .card-bullets{ margin:10px 0 0 0; padding-left:18px; max-width:65ch; }
-  .card-bullets li{ color:var(--text-muted); font-size:15px; margin-bottom:6px; }
-  .card-bullets li::marker{ color:var(--accent); }
-  .card-tags{ display:flex; gap:8px; margin-top:14px; flex-wrap:wrap; }
-  .tag{ font-size:11.5px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:var(--accent); background:var(--accent-soft); padding:4px 10px; border-radius:6px; }
-  .repo-status{ display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:var(--text-muted); border:1px solid var(--line); padding:4px 10px; border-radius:6px; margin-top:14px; }
-  .demo-links{ display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
-  .demo-link{ display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:var(--accent); border:1px solid rgba(85,194,232,0.35); padding:4px 10px; border-radius:6px; }
-  .demo-link:hover{ border-color:var(--accent); background:var(--accent-soft); }
-  @media (max-width:900px){
-    .layout{grid-template-columns:1fr;}
-    .sidebar{position:relative; height:auto; border-right:none; border-bottom:1px solid var(--line); padding:32px 24px;}
-    nav{flex-direction:row; flex-wrap:wrap; margin-top:28px; gap:10px;}
-    nav a{padding:8px 12px; border:1px solid var(--line); border-radius:999px;} nav a .bar{display:none;} nav a.active{background:var(--accent-soft); border-color:var(--accent);}
-    .socials{padding-top:28px; margin-top:8px;} main{padding:44px 24px 80px 24px;}
-  }
+  *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.7;-webkit-font-smoothing:antialiased} a{color:inherit;text-decoration:none}
+  .layout{display:grid;grid-template-columns:340px 1fr;max-width:1240px;margin:0 auto;min-height:100vh}.sidebar{position:sticky;top:0;align-self:start;height:100vh;padding:64px 40px 40px 0;display:flex;flex-direction:column;border-right:1px solid var(--line)}
+  .avatar{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#2c5f76);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:30px;color:#06141f;letter-spacing:1px;border:3px solid var(--line)}
+  .name{font-family:var(--display);font-weight:800;font-size:34px;letter-spacing:-.02em;margin-top:22px;line-height:1.15}.role{font-family:var(--display);font-weight:600;font-size:16px;color:var(--accent);margin-top:8px}.tagline{color:var(--muted);font-size:14.5px;margin-top:14px;max-width:27ch}
+  nav{margin-top:46px;display:flex;flex-direction:column;gap:2px}nav a{display:flex;align-items:center;gap:14px;padding:11px 4px;font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);transition:color .2s}nav a .bar{width:22px;height:1.5px;background:var(--dim);transition:all .25s}nav a:hover{color:var(--muted)}nav a:hover .bar{background:var(--muted)}nav a.active{color:var(--text)}nav a.active .bar{width:32px;background:var(--accent)}
+  .socials{margin-top:auto;display:flex;gap:18px;padding-top:40px}.socials a{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--muted);border:1px solid var(--line);transition:all .2s}.socials a:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}.socials svg{width:17px;height:17px}
+  main{padding:80px 56px 120px}section{display:none}section.active{display:block;animation:fadeUp .4s ease}@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+  h1.section-title{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:-.01em;margin-bottom:34px}.prose p{color:var(--muted);font-size:16.5px;margin-bottom:22px;max-width:70ch}.prose strong{color:var(--text);font-weight:600}
+  .highlights{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.highlight{font-size:11.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:5px 11px;border-radius:6px}
+  .card-list{display:flex;flex-direction:column}.card{display:block;padding:28px 0;border-bottom:1px solid var(--line)}.card:first-child{padding-top:0}.card-top{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:8px}.card-title-row{display:flex;align-items:center;gap:10px}.card-title{font-family:var(--display);font-weight:700;font-size:18px;color:var(--text)}.gh-icon{width:16px;height:16px;color:var(--dim);flex-shrink:0}.card-date{font-size:13px;color:var(--dim);white-space:nowrap;font-family:var(--display);letter-spacing:.04em}.card-desc{color:var(--muted);font-size:15px;max-width:68ch}.card-bullets{margin:10px 0 0;padding-left:18px;max-width:68ch}.card-bullets li{color:var(--muted);font-size:15px;margin-bottom:6px}.card-bullets li::marker{color:var(--accent)}.card-tags{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.tag{font-size:11.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:6px}.demo-links{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}.demo-link{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(85,194,232,.35);padding:5px 11px;border-radius:6px}.demo-link:hover{border-color:var(--accent);background:var(--accent-soft)}.repo-status{display:inline-flex;align-items:center;font-size:11.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:5px 11px;border-radius:6px;margin-top:14px}
+  .experience-item{padding:0 0 26px;margin-bottom:26px;border-bottom:1px solid var(--line)}.experience-item:last-child{border-bottom:0}.experience-title{font-family:var(--display);font-weight:700;font-size:18px}.experience-meta{color:var(--dim);font-size:13px;margin:4px 0 8px}.skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.skill-group{border:1px solid var(--line);border-radius:10px;padding:18px}.skill-group h2{font-family:var(--display);font-size:14px;margin-bottom:7px}.skill-group p{color:var(--muted);font-size:14px}
+  @media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:relative;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:32px 24px}nav{flex-direction:row;flex-wrap:wrap;margin-top:28px;gap:10px}nav a{padding:8px 12px;border:1px solid var(--line);border-radius:999px}nav a .bar{display:none}nav a.active{background:var(--accent-soft);border-color:var(--accent)}.socials{padding-top:28px;margin-top:8px}main{padding:44px 24px 80px}.skills-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -84,20 +31,13 @@
     <p class="tagline">Building scalable distributed systems, cloud-native platforms and AI-powered applications.</p>
     <nav id="nav">
       <a href="#about" class="nav-link active" data-target="about"><span class="bar"></span>About</a>
-      <a href="#timeline" class="nav-link" data-target="timeline"><span class="bar"></span>Timeline</a>
       <a href="#experience" class="nav-link" data-target="experience"><span class="bar"></span>Experience</a>
       <a href="#skills" class="nav-link" data-target="skills"><span class="bar"></span>Skills</a>
       <a href="#certificates" class="nav-link" data-target="certificates"><span class="bar"></span>Certificates</a>
-      <a href="#blog" class="nav-link" data-target="blog"><span class="bar"></span>Blog</a>
-      <a href="#papers" class="nav-link" data-target="papers"><span class="bar"></span>Papers</a>
       <a href="#projects" class="nav-link" data-target="projects"><span class="bar"></span>Projects</a>
-      <a href="#learnings" class="nav-link" data-target="learnings"><span class="bar"></span>Learnings</a>
     </nav>
     <div class="socials">
-      <a href="https://github.com/Prashansa0410" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.25.78-.55v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1.12-.29.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.17v3.22c0 .3.21.67.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg></a>
-      <a href="https://linkedin.com/in/yourhandle" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg></a>
-      <a href="https://x.com/yourhandle" target="_blank" aria-label="Twitter / X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2.25h3.07l-6.71 7.67 7.9 10.83h-6.19l-4.85-6.34-5.55 6.34H3.5l7.18-8.2L3.1 2.25h6.35l4.39 5.8 4.06-5.8Zm-1.08 16.7h1.7L7.28 4.06H5.46l12.36 14.9Z"/></svg></a>
-      <a href="mailto:you@example.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13A1.5 1.5 0 0 1 20.5 20h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.8 6.3 7.8-6.3H4.2Zm15.8 1.4-7.4 6-7.4-6V18.5h14.8V7.4Z"/></svg></a>
+      <a href="https://github.com/Prashansa0410" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.25.78-.55v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1.12-.29.52-1.46-.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.17v3.22c0 .3.21.67.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg></a>
     </div>
   </aside>
 
@@ -105,102 +45,73 @@
     <section id="about" class="active">
       <h1 class="section-title">About Me</h1>
       <div class="prose">
-        <p>I was born in <strong>Dehradun</strong> and spent my school years across Dehradun and Chennai. My passion for technology began in Classes 11 and 12 when I chose Computer Science and discovered C++.</p>
-        <p>I completed my B.Tech. in Information Technology from <strong>GNIT</strong>. After graduating in 2012 without a campus placement, I prepared for AMCAT and eLitmus, earned strong scores, and began my career at <strong>Accenture</strong>.</p>
-        <p>My journey continued through <strong>Oracle India</strong>, <strong>GE</strong>, and finally <strong>Visa Inc.</strong>, where I spent over six years growing into a Staff Software Engineer building distributed platforms and backend systems for global payment infrastructure.</p>
-        <p>In 2025, I chose to pursue an <strong>M.Tech. in AI & ML at BITS Pilani</strong> while spending time with my daughter. Today I maintain a <strong>CGPA of 9.52</strong> and build production-inspired AI, cloud and distributed systems projects.</p>
+        <p>Staff Software Engineer with <strong>12+ years of experience</strong> across distributed systems, backend engineering, automation and cloud platforms, including over six years at <strong>Visa</strong> building systems for global payment infrastructure.</p>
+        <p>Currently pursuing an <strong>M.Tech. in Artificial Intelligence & Machine Learning at BITS Pilani</strong> and building production-inspired systems that combine AI, data and distributed infrastructure.</p>
+        <p>My current focus is at the intersection of <strong>AI engineering, platform engineering and distributed systems</strong> — turning AI capabilities into reliable, observable and secure software.</p>
       </div>
+      <div class="highlights"><span class="highlight">Distributed Systems</span><span class="highlight">AI / ML</span><span class="highlight">Cloud & Platform</span><span class="highlight">Backend Engineering</span></div>
     </section>
 
-    <section id="timeline"><h1 class="section-title">Career Timeline</h1><div class="prose"><p><strong>2025–Present</strong> — M.Tech AI/ML, BITS Pilani (CGPA 9.52)</p><p><strong>2018–2025</strong> — Visa Inc. (Staff Software Engineer)</p><p><strong>2016</strong> — GE</p><p><strong>2016</strong> — Oracle India</p><p><strong>2013–2016</strong> — Accenture</p></div></section>
-    <section id="experience"><h1 class="section-title">Professional Experience</h1><div class="prose"><p><strong>Visa:</strong> Distributed systems, backend platforms, automation, global payment infrastructure.</p><p><strong>Oracle, GE & Accenture:</strong> Enterprise engineering, automation and platform development.</p></div></section>
-    <section id="skills"><h1 class="section-title">Technical Expertise</h1><div class="prose"><p><strong>Backend:</strong> Java, Spring Boot, REST APIs, Microservices</p><p><strong>Cloud:</strong> AWS, Docker, Kubernetes</p><p><strong>Concurrency:</strong> CompletableFuture, ExecutorService, Locks</p><p><strong>AI:</strong> Python, LLMs, RAG, Machine Learning</p></div></section>
+    <section id="experience">
+      <h1 class="section-title">Professional Experience</h1>
+      <div class="experience-item"><div class="experience-title">Visa Inc. — Staff Software Engineer</div><div class="experience-meta">2018–2025 · Global Payments Infrastructure</div><div class="prose"><p>Built and evolved distributed backend platforms and automation systems supporting high-volume payment infrastructure, with emphasis on reliability, performance, observability and scalable engineering practices.</p></div></div>
+      <div class="experience-item"><div class="experience-title">Oracle India — Software Engineer</div><div class="experience-meta">Enterprise Software</div></div>
+      <div class="experience-item"><div class="experience-title">GE — Software Engineer</div><div class="experience-meta">Enterprise Engineering</div></div>
+      <div class="experience-item"><div class="experience-title">Accenture — Software Engineer</div><div class="experience-meta">2013–2016 · Enterprise Technology</div></div>
+      <div class="experience-item"><div class="experience-title">BITS Pilani — M.Tech. Artificial Intelligence & Machine Learning</div><div class="experience-meta">2025–Present · CGPA 9.52</div></div>
+    </section>
+
+    <section id="skills">
+      <h1 class="section-title">Technical Expertise</h1>
+      <div class="skills-grid">
+        <div class="skill-group"><h2>Backend & Distributed Systems</h2><p>Java, Python, Spring Boot, REST APIs, Microservices, Kafka, RabbitMQ, Event-Driven Architecture</p></div>
+        <div class="skill-group"><h2>Cloud & Infrastructure</h2><p>AWS, Docker, Kubernetes, GitHub Actions, Jenkins, CI/CD, Prometheus, Grafana, Splunk</p></div>
+        <div class="skill-group"><h2>AI & Machine Learning</h2><p>Python, Machine Learning, NLP, LLM applications, RAG, Prompt Engineering, Agentic Workflows</p></div>
+        <div class="skill-group"><h2>Data & Storage</h2><p>PostgreSQL, SQLite, Redis, Elasticsearch, data pipelines, feature engineering and model training</p></div>
+        <div class="skill-group"><h2>Concurrency & Architecture</h2><p>CompletableFuture, ExecutorService, locks, thread safety, SOLID, dependency inversion, asynchronous workflows</p></div>
+        <div class="skill-group"><h2>Testing & Quality Engineering</h2><p>Python, Java, Selenium, Playwright, Rest Assured, TestNG, Cucumber, API and backend testing</p></div>
+      </div>
+    </section>
 
     <section id="certificates">
-      <h1 class="section-title">Certificates</h1>
+      <h1 class="section-title">Certifications</h1>
       <div class="card-list">
-        <a href="https://www.credly.com/badges/cea02e84-9b89-49d0-90cf-292d10a38ee7" target="_blank" class="card-link"><div class="card"><div class="card-top"><span class="card-title">AWS Certified Solutions Architect – Associate</span><span class="card-date">Issued Jul 2025 · Expires Jul 2028</span></div><p class="card-desc">Amazon Web Services — validates ability to design and deploy scalable, highly available, and cost-efficient systems on AWS.</p><div class="card-tags"><span class="tag">AWS</span><span class="tag">Cloud Architecture</span></div><div class="repo-status">Credential ID: cea02e84-9b89-49d0-90cf-292d10a38ee7</div></div></a>
+        <a href="https://www.credly.com/badges/cea02e84-9b89-49d0-90cf-292d10a38ee7" target="_blank" rel="noopener" class="card-link"><div class="card"><div class="card-top"><span class="card-title">AWS Certified Solutions Architect – Associate</span><span class="card-date">Jul 2025 · Jul 2028</span></div><p class="card-desc">Validates the ability to design and deploy scalable, highly available and cost-efficient systems on AWS.</p><div class="card-tags"><span class="tag">AWS</span><span class="tag">Cloud Architecture</span></div></div></a>
       </div>
     </section>
-
-    <section id="blog"><h1 class="section-title">Blog</h1><div class="card-list"><a href="#" class="card-link"><div class="card"><div class="card-top"><span class="card-title">Title of your first blog post</span><span class="card-date">Jan 2026</span></div><p class="card-desc">A one or two sentence summary of what the post covers and why it's worth reading.</p></div></a><a href="#" class="card-link"><div class="card"><div class="card-top"><span class="card-title">Another post title</span><span class="card-date">Nov 2025</span></div><p class="card-desc">Short summary here. Duplicate this card block for every post you want to list.</p></div></a></div></section>
-
-    <section id="papers"><h1 class="section-title">Papers</h1><div class="card-list"><a href="#" class="card-link"><div class="card"><div class="card-top"><span class="card-title">Paper title goes here</span><span class="card-date">2025</span></div><p class="card-desc">Venue / journal name — brief description of the contribution or finding.</p><div class="card-tags"><span class="tag">PDF</span><span class="tag">Citation</span></div></div></a></div></section>
 
     <section id="projects">
       <h1 class="section-title">Projects</h1>
       <div class="card-list">
-
-        <div class="card-link">
-          <div class="card">
-            <div class="card-top">
-              <div class="card-title-row"><svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.25.78-.55v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1.12-.29.52-1.46-.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.17v3.22c0 .3.21.67.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg><span class="card-title">OpsPulse AI</span></div>
-              <span class="card-date">Aug 2026 · Latest</span>
-            </div>
-            <p class="card-desc">An end-to-end AI-powered operational intelligence platform for high-volume commerce, fulfillment and logistics — designed to answer what happened, why it happened, what will happen next, and what action to take.</p>
-            <ul class="card-bullets">
-              <li>Built an enterprise-style control tower with <strong>11 specialized operational views</strong> covering executive KPIs, warehouse and carrier analytics, SLA risk, anomalies, root cause, simulation, data quality and system health.</li>
-              <li>Implemented an <strong>ML SLA-risk model</strong>, anomaly detection, explainable root-cause attribution and What-If simulation for operational decision support.</li>
-              <li>Built an <strong>AI Operations Analyst</strong> with read-only SQL guardrails, single-statement validation, row limits and transparent tool execution traces to keep responses verifiable and safe.</li>
-              <li>Designed a production-oriented data path across <strong>Kafka, Parquet, dbt and DuckDB/PostgreSQL</strong>, with FastAPI services, Prometheus metrics, Docker and GitHub Actions CI/CD.</li>
-            </ul>
-            <div class="card-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Next.js</span><span class="tag">Machine Learning</span><span class="tag">Kafka</span><span class="tag">DuckDB</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span></div>
-            <div class="demo-links"><a href="https://opspulse-ai-alpha.vercel.app/" target="_blank" class="demo-link">Live Demo ↗</a><a href="https://github.com/Prashansa0410/opspulse-ai" target="_blank" class="demo-link">GitHub ↗</a></div>
-          </div>
+        <div class="card">
+          <div class="card-top"><div class="card-title-row"><svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.25.78-.55v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1.12-.29.52-1.46-.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.17v3.22c0 .3.21.67.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg><span class="card-title">QueryPilot AI</span></div><span class="card-date">Aug 2026 · Featured</span></div>
+          <p class="card-desc">Enterprise-grade AI database query assistant that translates natural language into SQL, executes real queries, routes requests across models based on complexity and cost, and applies human-in-the-loop governance to risky operations.</p>
+          <ul class="card-bullets"><li>Built a <strong>cost-aware multi-model LLM router</strong> that routes simple requests to fast, economical models and complex or destructive requests to stronger reasoning models.</li><li>Added a deterministic <strong>SQL security risk engine</strong> that intercepts destructive operations such as DELETE and DROP for human review.</li><li>Implemented real SQL execution against the <strong>Chinook SQLite database</strong> and a developer observability panel for model selection, token usage, latency and estimated savings.</li><li>Built with <strong>Next.js 15, FastAPI, SQLite and shadcn/ui</strong>, with MCP integration readiness.</li></ul>
+          <div class="card-tags"><span class="tag">Next.js 15</span><span class="tag">FastAPI</span><span class="tag">LLM Routing</span><span class="tag">SQL</span><span class="tag">AI Security</span><span class="tag">MCP</span></div>
+          <div class="demo-links"><a href="https://querypilot-ai-liart.vercel.app/" target="_blank" rel="noopener" class="demo-link">Live Demo ↗</a><a href="https://github.com/Prashansa0410/querypilot-ai" target="_blank" rel="noopener" class="demo-link">GitHub ↗</a></div>
         </div>
 
-        <div class="card-link">
-          <div class="card">
-            <div class="card-top">
-              <div class="card-title-row"><svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.25.78-.55v-2.1c0-3.2-.3-3.87-1.36-3.87-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1.12-.29.52-1.46-.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.17v3.22c0 .3.21.67.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg><span class="card-title">QueryPilot AI</span></div>
-              <span class="card-date">Aug 2026 · Latest</span>
-            </div>
-            <p class="card-desc">An enterprise-grade AI database query assistant that translates natural language into SQL, executes real database queries, routes requests across models based on complexity and cost, and applies human-in-the-loop governance to risky operations.</p>
-            <ul class="card-bullets">
-              <li>Built a <strong>cost-aware multi-model LLM router</strong> that sends simple queries to fast, economical models and complex or destructive requests to stronger reasoning models.</li>
-              <li>Added a deterministic <strong>security risk engine</strong> that intercepts destructive SQL such as <strong>DELETE</strong> and <strong>DROP</strong> for human review before execution.</li>
-              <li>Implemented real SQL execution against the <strong>Chinook SQLite database</strong>, with a developer observability panel showing token usage, latency, model selection and estimated savings.</li>
-              <li>Architected the application with <strong>Next.js 15, FastAPI, SQLite and shadcn/ui</strong>, with MCP integration readiness for agent workflows.</li>
-            </ul>
-            <div class="card-tags"><span class="tag">Next.js 15</span><span class="tag">FastAPI</span><span class="tag">LLM Routing</span><span class="tag">SQL</span><span class="tag">AI Security</span><span class="tag">MCP</span></div>
-            <div class="demo-links"><a href="https://querypilot-ai-liart.vercel.app/" target="_blank" class="demo-link">Live Demo ↗</a><a href="https://github.com/Prashansa0410/querypilot-ai" target="_blank" class="demo-link">GitHub ↗</a></div>
-          </div>
+        <div class="card">
+          <div class="card-top"><div class="card-title-row"><svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.25.78-.55v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1.12-.29.52-1.46-.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.17v3.22c0 .3.21.67.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg><span class="card-title">OpsPulse AI</span></div><span class="card-date">Aug 2026</span></div>
+          <p class="card-desc">AI-powered operational intelligence platform for high-volume commerce, fulfillment and logistics, designed to answer what happened, why it happened, what will happen next and what action to take.</p>
+          <ul class="card-bullets"><li>Built an enterprise-style control tower with <strong>11 operational views</strong> covering KPIs, warehouse and carrier analytics, SLA risk, anomalies, root cause, simulation, data quality and system health.</li><li>Implemented <strong>ML SLA-risk prediction, anomaly detection and explainable root-cause attribution</strong> for operational decision support.</li><li>Built an <strong>AI Operations Analyst</strong> with read-only SQL guardrails, single-statement validation, row limits and transparent execution traces.</li><li>Designed a production-oriented data path across <strong>Kafka, Parquet, dbt and DuckDB/PostgreSQL</strong>, with FastAPI, Prometheus, Docker and GitHub Actions CI/CD.</li></ul>
+          <div class="card-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Next.js</span><span class="tag">ML</span><span class="tag">Kafka</span><span class="tag">Docker</span><span class="tag">CI/CD</span></div>
+          <div class="demo-links"><a href="https://opspulse-ai-alpha.vercel.app/" target="_blank" rel="noopener" class="demo-link">Live Demo ↗</a><a href="https://github.com/Prashansa0410/opspulse-ai" target="_blank" rel="noopener" class="demo-link">GitHub ↗</a></div>
         </div>
 
-        <a href="https://github.com/Prashansa0410/async-order-processing-platform" target="_blank" class="card-link"><div class="card"><div class="card-top"><div class="card-title-row"><svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.25.78-.55v-2.1c0-3.2-.3-3.87-1.36-3.87-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1.12-.29.52-1.46-.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.17v3.22c0 .3.21.67.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg><span class="card-title">Async Order Processing Platform</span></div><span class="card-date">In Progress</span></div><p class="card-desc">A production-inspired Java backend simulating how a real-world order processing system evolves from a simple asynchronous workflow into a scalable, concurrent service — built incrementally to demonstrate modern Java concurrency and backend design.</p><ul class="card-bullets"><li>Designed an immutable, thread-safe <strong>Order</strong> domain model and a stateless <strong>OrderValidator</strong> to eliminate shared mutable state across concurrent requests</li><li>Built an asynchronous <strong>OrderService</strong> pipeline using <strong>CompletableFuture</strong>, applying constructor-based dependency injection for loose coupling and testability</li><li>Applied core concurrency APIs — <strong>supplyAsync, thenApply, thenAccept</strong> — and reasoned through Java's internal callback registration and execution model</li><li>Following SOLID principles and Dependency Inversion throughout; roadmap includes Inventory, Payment, and Fraud Detection services with custom thread pools</li></ul><div class="card-tags"><span class="tag">Java</span><span class="tag">CompletableFuture</span><span class="tag">ExecutorService</span><span class="tag">Concurrency</span><span class="tag">SOLID</span></div><div class="repo-status">View on GitHub</div></div></a>
+        <a href="https://github.com/Prashansa0410/async-order-processing-platform" target="_blank" rel="noopener" class="card-link"><div class="card"><div class="card-top"><div class="card-title-row"><svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.25.78-.55v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1.12-.29.52-1.46-.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.17v3.22c0 .3.21.67.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg><span class="card-title">Async Order Processing Platform</span></div><span class="card-date">In Progress</span></div><p class="card-desc">Production-inspired Java backend demonstrating asynchronous workflows, concurrency and clean backend design for an order processing system.</p><ul class="card-bullets"><li>Designed an immutable, thread-safe <strong>Order</strong> domain model and stateless validation layer.</li><li>Built an asynchronous service pipeline using <strong>CompletableFuture</strong> with constructor-based dependency injection.</li><li>Applied <strong>supplyAsync, thenApply and thenAccept</strong> while reasoning about callback execution and thread behavior.</li></ul><div class="card-tags"><span class="tag">Java</span><span class="tag">CompletableFuture</span><span class="tag">Concurrency</span><span class="tag">SOLID</span></div><div class="repo-status">View on GitHub ↗</div></div></a>
 
-        <a href="https://github.com/Prashansa0410/FluxBasis-AI" target="_blank" class="card-link"><div class="card"><div class="card-top"><div class="card-title-row"><svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.25.78-.55v-2.1c0-3.2-.3-3.87-1.36-3.87-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1.12-.29-.52-1.46-.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.17v3.22c0 .3.21.67.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg><span class="card-title">FluxBasis AI</span></div><span class="card-date">In Progress</span></div><p class="card-desc">An open-source, AI-powered CI reliability platform that predicts flaky tests in CI/CD pipelines and surfaces explainable ML insights — applying machine learning to infrastructure reliability rather than product features.</p><ul class="card-bullets"><li>Built a modular pipeline — <strong>Data Collector → Preprocessor → ML Engine → Reporter</strong> — that ingests historical test execution logs and classifies tests as flaky or stable with a confidence score</li><li>Engineered features from test execution data and designed for multi-framework ingestion across <strong>Selenium, Playwright, Pytest, and TestNG</strong></li></ul><div class="card-tags"><span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">CI/CD</span><span class="tag">Open Source</span></div><div class="repo-status">View on GitHub</div></div></a>
+        <a href="https://github.com/Prashansa0410/FluxBasis-AI" target="_blank" rel="noopener" class="card-link"><div class="card"><div class="card-top"><div class="card-title-row"><svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.25.78-.55v-2.1c-3.2-1.36-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.17v3.22c0 .3.21.67.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg><span class="card-title">FluxBasis AI</span></div><span class="card-date">In Progress</span></div><p class="card-desc">Open-source AI-powered CI reliability platform that predicts flaky tests and surfaces explainable ML insights for CI/CD pipelines.</p><ul class="card-bullets"><li>Designed a modular <strong>Data Collector → Preprocessor → ML Engine → Reporter</strong> pipeline.</li><li>Engineered features from historical test execution data with multi-framework ingestion for <strong>Selenium, Playwright, Pytest and TestNG</strong>.</li></ul><div class="card-tags"><span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">CI/CD</span><span class="tag">Open Source</span></div><div class="repo-status">View on GitHub ↗</div></div></a>
 
-        <a href="https://github.com/Prashansa0410/DAGUsingAirflow" target="_blank" class="card-link"><div class="card"><div class="card-top"><div class="card-title-row"><svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.25.78-.55v-2.1c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg><span class="card-title">Data Pipeline Orchestration with Airflow</span></div><span class="card-date">In Progress</span></div><p class="card-desc">An Apache Airflow project for orchestrating and scheduling data pipelines — laying the orchestration layer that feeds and retrains ML systems like FluxBasis AI on a reliable, automated schedule.</p><ul class="card-bullets"><li>Set up a local Airflow environment using the Astronomer CLI for reproducible development</li><li>Building DAGs using Airflow's <strong>TaskFlow API</strong> with dynamic task mapping for scheduled ETL and pipeline orchestration</li></ul><div class="card-tags"><span class="tag">Apache Airflow</span><span class="tag">ETL</span><span class="tag">Data Orchestration</span><span class="tag">Docker</span></div><div class="repo-status">View on GitHub</div></div></a>
-
-        <a href="#" class="card-link"><div class="card"><div class="card-top"><span class="card-title">Another project</span><span class="card-date">2025</span></div><p class="card-desc">Short description. Duplicate this card block for each project you want to list.</p><div class="card-tags"><span class="tag">Python</span></div></div></a>
+        <a href="https://github.com/Prashansa0410/DAGUsingAirflow" target="_blank" rel="noopener" class="card-link"><div class="card"><div class="card-top"><div class="card-title-row"><svg class="gh-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.11.78-.25.78-.55v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.68-1.29-1.68-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.08.78 2.17v3.22c0 .3.21.67.79.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg><span class="card-title">Data Pipeline Orchestration with Airflow</span></div><span class="card-date">In Progress</span></div><p class="card-desc">Apache Airflow project for reliable scheduling and orchestration of data pipelines that can feed downstream ML workflows.</p><ul class="card-bullets"><li>Set up reproducible local Airflow development using the Astronomer CLI.</li><li>Building DAGs with the <strong>TaskFlow API</strong> and dynamic task mapping for ETL and pipeline orchestration.</li></ul><div class="card-tags"><span class="tag">Apache Airflow</span><span class="tag">ETL</span><span class="tag">Data Orchestration</span><span class="tag">Docker</span></div><div class="repo-status">View on GitHub ↗</div></div></a>
       </div>
     </section>
-
-    <section id="learnings"><h1 class="section-title">Learnings</h1><div class="prose"><p>Use this section for reflections, lessons from your career, or advice you'd give your younger self. Personal, opinionated notes tend to be the most-read part of a portfolio.</p><p>You can also format this as a list of short, punchy lessons instead of paragraphs — whichever fits your voice better.</p></div></section>
   </main>
 </div>
 <script>
-  const links = document.querySelectorAll('.nav-link');
-  const sections = document.querySelectorAll('main > section');
-  links.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = link.dataset.target;
-      links.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-      sections.forEach(s => s.classList.remove('active'));
-      document.getElementById(target).classList.add('active');
-      history.replaceState(null, '', '#' + target);
-    });
-  });
-  window.addEventListener('DOMContentLoaded', () => {
-    const hash = window.location.hash.replace('#', '');
-    if (hash) {
-      const link = document.querySelector(`.nav-link[data-target="${hash}"]`);
-      if (link) link.click();
-    }
-  });
+const links=document.querySelectorAll('.nav-link');const sections=document.querySelectorAll('main > section');
+links.forEach(link=>link.addEventListener('click',e=>{e.preventDefault();const target=link.dataset.target;links.forEach(l=>l.classList.remove('active'));link.classList.add('active');sections.forEach(s=>s.classList.remove('active'));document.getElementById(target).classList.add('active');history.replaceState(null,'','#'+target)}));
+window.addEventListener('DOMContentLoaded',()=>{const hash=window.location.hash.replace('#','');const link=document.querySelector(`.nav-link[data-target="${hash}"]`);if(link)link.click()});
 </script>
 </body>
 </html>
