@@ -19,6 +19,245 @@ main{padding:58px 56px 100px}.eyebrow{font:600 14px var(--display);letter-spacin
 .project{border:1px solid var(--line);background:linear-gradient(145deg,rgba(13,21,33,.9),rgba(8,14,23,.85));border-radius:12px;padding:24px;margin-bottom:18px}.project.featured{border-color:rgba(79,195,241,.35)}.project-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}.project-title{font:700 20px var(--display)}.project-date{font-size:12px;color:var(--dim);white-space:nowrap}.project-desc{color:var(--muted);font-size:15px;margin:10px 0}.project ul{padding-left:18px;color:var(--muted);font-size:14px}.project li{margin:6px 0}.project li::marker{color:var(--accent)}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}.tag{font-size:11px;font-weight:600;color:var(--accent);background:var(--soft);border-radius:5px;padding:4px 9px}.links{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.btn{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(79,195,241,.35);border-radius:6px;padding:6px 10px}.btn:hover{background:var(--soft);border-color:var(--accent)}
 .cert{border:1px solid var(--line);border-radius:10px;padding:20px}.cert-title{font:700 18px var(--display)}.cert-meta{font-size:13px;color:var(--dim);margin:5px 0 10px}.cert p{color:var(--muted);font-size:14px}
 @media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:relative;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:30px 24px}.connect{margin-top:25px}nav{flex-direction:row;flex-wrap:wrap;gap:7px}nav a{border:1px solid var(--line);border-radius:20px;padding:7px 10px}main{padding:38px 24px 70px}.stats{grid-template-columns:repeat(2,1fr);gap:22px}.stat{border-left:0;padding:0}.skills{grid-template-columns:1fr}.project-head{display:block}.project-date{display:block;margin-top:4px}}
+
+/* ========================================================
+   DYNAMIC ENGINEERING LIBRARY & REPOSITORY STYLES
+   ======================================================== */
+.library-header {
+  margin-bottom: 28px;
+}
+.library-stats-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--soft);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  margin-bottom: 12px;
+  border: 1px solid rgba(79,195,241,.25);
+}
+.library-stats-pill::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+.library-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0 32px;
+  background: rgba(13,21,33,.75);
+  border: 1px solid var(--line);
+  padding: 20px;
+  border-radius: 14px;
+}
+.library-search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.library-search-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--dim);
+  font-size: 15px;
+  pointer-events: none;
+}
+.library-search {
+  width: 100%;
+  background: rgba(8,14,23,.9);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 38px 12px 38px;
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 14px;
+  transition: all .2s ease;
+  outline: none;
+}
+.library-search:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79,195,241,.15);
+}
+.library-search::placeholder {
+  color: var(--dim);
+}
+.library-search-clear {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--dim);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+  display: none;
+}
+.library-search-clear:hover {
+  color: var(--text);
+}
+.library-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.library-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.lib-tab {
+  background: rgba(8,14,23,.7);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s ease;
+  user-select: none;
+}
+.lib-tab:hover {
+  color: var(--text);
+  border-color: rgba(79,195,241,.4);
+  background: var(--soft);
+}
+.lib-tab.active {
+  background: var(--accent);
+  color: #080e17;
+  border-color: var(--accent);
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(79,195,241,.3);
+}
+.library-counter {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+}
+.library-counter strong {
+  color: var(--accent);
+}
+
+/* Card Enhancements */
+.project-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.badge-featured {
+  background: rgba(79,195,241,.18);
+  color: var(--accent);
+  border: 1px solid rgba(79,195,241,.4);
+}
+.badge-tech {
+  background: rgba(255,255,255,.05);
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+.project-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+  margin: 14px 0 16px;
+}
+.metric-chip {
+  background: rgba(8,14,23,.75);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 2px solid var(--accent);
+}
+.metric-chip strong {
+  font-size: 16px;
+  color: var(--text);
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+.tag {
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.tag:hover {
+  background: rgba(79,195,241,.25);
+  transform: translateY(-1px);
+}
+.tag.active-tag {
+  background: var(--accent);
+  color: #080e17;
+  font-weight: 700;
+}
+
+/* Empty State */
+.library-empty {
+  display: none;
+  text-align: center;
+  padding: 48px 24px;
+  background: rgba(13,21,33,.5);
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  margin: 20px 0;
+}
+.library-empty h3 {
+  font: 700 18px var(--display);
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.library-empty p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.btn-reset {
+  background: var(--soft);
+  color: var(--accent);
+  border: 1px solid rgba(79,195,241,.35);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.btn-reset:hover {
+  background: var(--accent);
+  color: #080e17;
+}
+
+/* Transition for Filtering */
+.project {
+  transition: opacity .25s ease, transform .25s ease;
+}
+.project.hidden {
+  display: none !important;
+}
+
 </style>
 </head>
 <body>
@@ -69,54 +308,414 @@ main{padding:58px 56px 100px}.eyebrow{font:600 14px var(--display);letter-spacin
 
   <section id="certifications" class="section"><div class="eyebrow">Certifications</div><h2 class="hero-title" style="font-size:36px">Cloud credentials</h2><div class="cert"><div class="cert-title">AWS Certified Solutions Architect – Associate</div><div class="cert-meta">Issued Jul 2025 · Valid through Jul 2028</div><p>Validates the ability to design and deploy scalable, highly available and cost-efficient systems on AWS.</p><div class="links"><a class="btn" href="https://www.credly.com/badges/cea02e84-9b89-49d0-90cf-292d10a38ee7" target="_blank" rel="noopener">View Credential ↗</a></div></div></section>
 
-  <section id="projects" class="section"><div class="eyebrow">Projects & Benchmarks</div><h2 class="hero-title" style="font-size:36px">Selected engineering work</h2>
-    <p class="prose" style="margin-bottom:24px;font-size:14px;"><span style="color:var(--accent);font-weight:600;">Evaluation Standard:</span> Project evaluations and benchmarks are structured using Google's <em>Accomplished [X], as measured by [Y], by doing [Z]</em> engineering impact framework.</p>
+    <section id="projects" class="section">
+    <div class="library-header">
+      <div class="library-stats-pill">Production Architecture &amp; Benchmark Library</div>
+      <div class="eyebrow">Interactive Repository</div>
+      <h2 class="hero-title" style="font-size:36px">Selected engineering systems</h2>
+      <p class="hero-copy" style="font-size:15px;max-width:760px;">
+        A searchable catalog of production distributed architectures, autonomous agent platforms, financial ML pipelines, and high-concurrency cloud backends built across 12+ years of engineering.
+      </p>
+    </div>
 
-    <article class="project featured"><div class="project-head"><div class="project-title">RouteFlow AI — Intelligent Cross-Border Payment Routing ML Engine</div><div class="project-date">Nov 2026 · Featured</div></div><p class="project-desc">Production-grade dual-task Machine Learning platform optimizing capital flows across multi-hop correspondent banking networks (Nostro/Vostro accounts), predicting transaction success probabilities and settlement latencies in real time.</p><ul>
-      <li><strong>Accomplished risk-calibrated payment success prediction</strong>, as measured by achieving an <strong>Expected Calibration Error (ECE) of 0.66%</strong>, 0.6980 ROC-AUC, and 0.0761 Brier score, by architecting a Platt-calibrated <strong>HistGradientBoostingClassifier</strong> trained on 50,000 multi-corridor transaction records.</li>
-      <li><strong>Accomplished sub-hour clearing latency forecasting across timezone cutoffs</strong>, as measured by slashing Mean Absolute Error (MAE) by <strong>38.5%</strong> (from 113.4m to 69.7m) with an <strong>R² of 0.942</strong>, by fitting a log-transformed <strong>HistGradientBoostingRegressor</strong> with cyclical temporal feature engineering.</li>
-      <li><strong>Accomplished automated multi-corridor capital optimization</strong>, as measured by enforcing strict SLA reliability floors (≥85% success) and Pareto utility scoring at <strong>&lt;15ms p95 API response times</strong>, by engineering a constrained multi-objective decision engine atop a thread-safe Singleton FastAPI serving layer.</li>
-      <li><strong>Accomplished continuous production reliability and drift prevention</strong>, as measured by <strong>100% CI/CD pass rate across 26 automated pytest tests</strong> and <strong>0.0000 Population Stability Index (PSI)</strong>, by implementing directional ML property tests, invariance suites, and defensive Pydantic v2 data contracts.</li>
-      <li><strong>Accomplished seamless cross-functional stakeholder observability</strong>, as measured by delivering interactive end-to-end telemetry and corridor comparison across 5 pipeline stages, by building an embedded <strong>interactive corridor story walkthrough (/demo)</strong> and operational console with dark/light theming.</li>
-    </ul><div class="tags"><span class="tag">Machine Learning</span><span class="tag">Gradient Boosting</span><span class="tag">FastAPI</span><span class="tag">FinTech Payments</span><span class="tag">Multi-Objective Optimization</span><span class="tag">Scikit-Learn</span><span class="tag">Docker</span><span class="tag">MLOps</span></div><div class="links"><a class="btn" href="https://routeflow-ai.onrender.com/" target="_blank" rel="noopener">Live Demo ↗</a><a class="btn" href="https://github.com/Prashansa0410/cross-border-payment-routing-ml" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+    <!-- Library Controls: Search & Multi-Category Filtering -->
+    <div class="library-controls">
+      <div class="library-search-wrapper">
+        <span class="library-search-icon">&#9906;</span>
+        <input type="text" id="projectSearch" class="library-search" placeholder="Search systems by architecture, keyword, or tech stack (e.g. Agentic, RAG, Kafka, Spring Boot, DPO, FAISS)..." autocomplete="off">
+        <button id="searchClear" class="library-search-clear" title="Clear search">&times;</button>
+      </div>
 
-    <article class="project featured"><div class="project-head"><div class="project-title">FinDoc-RAG — Hybrid Financial RAG &amp; Cross-Encoder Engine</div><div class="project-date">Nov 2026 · Featured</div></div><p class="project-desc">Enterprise-grade, verifiable Retrieval-Augmented Generation (RAG) system specialized for complex corporate SEC financial disclosures (Forms 10-K &amp; 10-Q), evaluated on an NVIDIA A100-80GB GPU at BITS Pilani.</p><ul>
-      <li><strong>Accomplished high-precision corporate disclosure retrieval</strong>, as measured by achieving <strong>40.0% Hit@1</strong> and <strong>50.0% Hit@3</strong> in <strong>10.10ms</strong>, by architecting a hybrid retrieval pipeline combining <strong>BAAI/bge-small-en-v1.5</strong> dense vector search (FAISS IndexFlatIP) and <strong>BM25Okapi</strong> sparse lexical search via Reciprocal Rank Fusion (RRF, k=60).</li>
-      <li><strong>Accomplished fine-grained candidate passage re-ranking</strong>, as measured by driving a <strong>60.0% Rank Change Rate</strong> on retrieved candidate pools, by integrating a <strong>Cross-Encoder (ms-marco-MiniLM-L-6-v2)</strong> performing joint query-passage cross-attention over financial disclosures.</li>
-      <li><strong>Accomplished zero cross-company entity contamination</strong>, as measured by <strong>100% false-positive elimination</strong> and moving ground-truth target disclosures directly to Rank #1, by formulating an entity-aware metadata pre-filtering mechanism.</li>
-      <li><strong>Accomplished hallucination-free financial synthesis</strong>, as measured by achieving <strong>90.0% grounded faithfulness</strong> in dual-criterion LLM audits, by engineering an automated <strong>LLM-as-a-Judge audit (meta-llama/Llama-3.1-8B-Instruct)</strong> on Qwen2.5-7B outputs with strict negative abstention guardrails.</li>
-    </ul><div class="tags"><span class="tag">RAG</span><span class="tag">FAISS</span><span class="tag">BM25</span><span class="tag">Cross-Encoder</span><span class="tag">Qwen2.5</span><span class="tag">Llama-3.1</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">PyTorch</span><span class="tag">NVIDIA A100</span></div><div class="links"><a class="btn" href="https://github.com/Prashansa0410/financial-rag-system" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+      <div class="library-filter-bar">
+        <div class="library-tabs" id="categoryTabs">
+          <button class="lib-tab active" data-filter="all">All Systems (9)</button>
+          <button class="lib-tab" data-filter="agentic">Agentic AI &amp; LLMs (4)</button>
+          <button class="lib-tab" data-filter="fintech">FinTech &amp; Payments (5)</button>
+          <button class="lib-tab" data-filter="distributed">Distributed Systems (5)</button>
+          <button class="lib-tab" data-filter="mlops">ML &amp; Data Platforms (4)</button>
+        </div>
+        <div class="library-counter" id="projectCounter">Showing <strong>9</strong> of <strong>9</strong> systems</div>
+      </div>
+    </div>
 
-    <article class="project featured"><div class="project-head"><div class="project-title">CrossPay-AI — Cross-Border Clearing &amp; Exception Copilot</div><div class="project-date">Nov 2026 · Featured</div></div><p class="project-desc">Production-grade Small Language Model (SLM) cognitive copilot for real-time payment exception triage, automated ISO 20022 pacs.028 repair XML synthesis, and multi-corridor regulatory clearing RAG (RBI, Pay.UK, SEPA, NACHA).</p><ul>
-      <li><strong>Accomplished automated real-time wire exception classification</strong>, as measured by attaining <strong>88.89% validation accuracy</strong> at <strong>sub-15ms inference latency</strong> across 10 error classes, by fine-tuning a <strong>DistilBERT</strong> transformer model on historical MT103 and pacs.008 correspondent banking payment failure logs.</li>
-      <li><strong>Accomplished automated regulatory-compliant payment repair</strong>, as measured by generating <strong>100% schema-compliant ISO 20022 pacs.028.001.01 XML</strong> repair records with zero hallucinated elements, by coupling <strong>FLAN-T5-Base</strong> with dynamic schema structural guardrails.</li>
-      <li><strong>Accomplished multi-jurisdiction clearing compliance retrieval</strong>, as measured by delivering sub-second regulatory clause mapping, by developing a domain-specialized RAG knowledge engine using <strong>all-MiniLM-L6-v2 vector embeddings</strong> across RBI, SEPA, Pay.UK, and NACHA mandates.</li>
-    </ul><div class="tags"><span class="tag">SLM</span><span class="tag">DistilBERT</span><span class="tag">FLAN-T5</span><span class="tag">RAG</span><span class="tag">ISO 20022</span><span class="tag">PyTorch</span><span class="tag">Streamlit</span><span class="tag">Hugging Face</span></div><div class="links"><a class="btn" href="https://crosspay-ai-copilot.streamlit.app/" target="_blank" rel="noopener">Live Demo ↗</a><a class="btn" href="https://github.com/Prashansa0410/CrossPay-AI" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+    <!-- Empty Search State -->
+    <div id="libraryEmpty" class="library-empty">
+      <h3>No engineering systems found</h3>
+      <p>No architectures matched your search query or active filter.</p>
+      <button id="resetFiltersBtn" class="btn-reset">Reset All Filters</button>
+    </div>
 
-    <article class="project featured"><div class="project-head"><div class="project-title">QueryPilot AI</div><div class="project-date">Aug 2026 · Featured</div></div><p class="project-desc">Enterprise-grade AI database query assistant that translates natural language into SQL, executes real queries, routes requests across models based on complexity and cost, and applies human-in-the-loop governance to risky operations.</p><ul>
-      <li><strong>Accomplished enterprise LLM operational cost reduction</strong>, as measured by reducing API spend by an estimated <strong>65%</strong> while intercepting <strong>100% of destructive statements</strong>, by architecting a semantic complexity router dispatching routine queries to economical models and complex joins to reasoning models.</li>
-      <li><strong>Accomplished deterministic database security guardrails</strong>, as measured by zero unvetted schema modifications or bulk data deletions across query executions, by engineering an AST-based SQL security risk engine intercepting DROP, TRUNCATE, and DELETE operations for human authorization.</li>
-      <li><strong>Accomplished transparent observability for natural language querying</strong>, as measured by sub-second query synthesis and live token/latency auditing on real SQLite/PostgreSQL workloads, by developing an enterprise full-stack workbench with Next.js 15, FastAPI, and MCP integration readiness.</li>
-    </ul><div class="tags"><span class="tag">Next.js 15</span><span class="tag">FastAPI</span><span class="tag">LLM Routing</span><span class="tag">SQL</span><span class="tag">AI Security</span><span class="tag">MCP</span></div><div class="links"><a class="btn" href="https://querypilot-ai-liart.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a><a class="btn" href="https://github.com/Prashansa0410/querypilot-ai" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+    <!-- PROJECT 1: FinAgentic (Top Flagship) -->
+    <article class="project featured" data-category="agentic fintech" data-tags="agentic-ai react dpo hybrid-rag faiss bm25 pydantic-v2 ollama pytorch self-instruct">
+      <div class="project-head">
+        <div>
+          <div class="project-badge-row">
+            <span class="badge badge-featured">Featured System</span>
+            <span class="badge badge-tech">Autonomous Multi-Agent</span>
+            <span class="badge badge-tech">Financial SLA Guardrails</span>
+          </div>
+          <div class="project-title">FinAgentic — Autonomous Agentic Workflow Automation Platform</div>
+        </div>
+        <div class="project-date">Nov 2026 · Production AI</div>
+      </div>
+      <p class="project-desc">
+        Enterprise-grade autonomous multi-agent platform for retail banking operations. Features cost-aware hierarchical DAG planning, defensive ReAct agents, multi-tier memory, hybrid sparse-dense RAG, and Direct Preference Optimization (DPO).
+      </p>
+      <div class="project-metrics">
+        <div class="metric-chip"><strong>92.0%</strong> Token Cost Reduction</div>
+        <div class="metric-chip"><strong>100%</strong> Red-Team Defense Rate</div>
+        <div class="metric-chip"><strong>96.5%</strong> Recall@10 Hybrid RAG</div>
+        <div class="metric-chip"><strong>29.0%</strong> Workflow Step Savings</div>
+      </div>
+      <ul>
+        <li><strong>92.0% Monthly Inference Cost Reduction:</strong> Architected a dynamic tiered model router (80% Small LM, 15% MoE, 5% Frontier) reducing monthly token inference spend from $6,600.00 to $529.20 across 300,000 automated monthly workflows while maintaining high-assurance resolution accuracy.</li>
+        <li><strong>100% Adversarial Red-Team Defense:</strong> Formulated a defense-in-depth security gateway combining strict Pydantic v2 schemas, regex-based PII masking (SSN, PAN, card numbers), bounded step execution (k &le; 8), and Human-in-the-Loop (HITL) supervisor escrow for high-value fund movements with sub-millisecond decision latency (0.14ms).</li>
+        <li><strong>Hybrid Sparse-Dense RAG &amp; Cross-Encoder Re-Ranking:</strong> Engineered a multi-stage retrieval engine combining Okapi BM25 and FAISS HNSW via Reciprocal Rank Fusion (k=60) and Cross-Encoder re-ranking achieving <strong>96.5% Recall@10</strong> and <strong>0.8490 MRR</strong>, coupled with Voyager-style procedural skill caching that cut workflow execution steps by <strong>29.0%</strong>.</li>
+        <li><strong>Direct Preference Optimization (DPO) &amp; Drift Telemetry:</strong> Formulated an end-to-end alignment pipeline eliminating unstable reward models, continuous population drift detection via Population Stability Index (PSI), and bidirectional LLM-as-a-Judge calibration (&kappa; = 0.733) with human ground truth.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Agentic AI</span>
+        <span class="tag">ReAct</span>
+        <span class="tag">DPO Alignment</span>
+        <span class="tag">Hybrid RAG</span>
+        <span class="tag">FAISS HNSW</span>
+        <span class="tag">BM25</span>
+        <span class="tag">Pydantic v2</span>
+        <span class="tag">Ollama / Qwen 2.5</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">Self-Instruct</span>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://github.com/Prashansa0410/FinAgentic" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" href="https://github.com/Prashansa0410/FinAgentic/blob/main/agentic_banking_system_report.pdf" target="_blank" rel="noopener">Architecture Report (PDF) ↗</a>
+      </div>
+    </article>
 
-    <article class="project"><div class="project-head"><div class="project-title">OpsPulse AI</div><div class="project-date">Aug 2026</div></div><p class="project-desc">AI-powered operational intelligence platform for high-volume commerce, fulfillment and logistics, designed to answer what happened, why it happened, what will happen next and what action to take.</p><ul>
-      <li><strong>Accomplished proactive SLA breach prevention across fulfillment pipelines</strong>, as measured by surfacing risk flags across <strong>11 real-time operational views</strong>, by implementing supervised ML SLA-risk prediction and explainable root-cause attribution models.</li>
-      <li><strong>Accomplished safe self-service operational analytics for non-technical users</strong>, as measured by <strong>100% read-only data compliance</strong> with zero unauthorized mutations, by building an AI Operations Analyst enforcing single-statement validation and row limits.</li>
-      <li><strong>Accomplished high-throughput event processing and analytical modeling</strong>, as measured by streaming thousands of daily order state changes with sub-second dashboard refreshes, by designing a modular data pipeline across Kafka, Parquet, dbt, DuckDB/PostgreSQL, and FastAPI.</li>
-    </ul><div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Next.js</span><span class="tag">ML</span><span class="tag">Kafka</span><span class="tag">Docker</span><span class="tag">CI/CD</span></div><div class="links"><a class="btn" href="https://opspulse-ai-alpha.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a><a class="btn" href="https://github.com/Prashansa0410/opspulse-ai" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+    <!-- PROJECT 2: RouteFlow AI -->
+    <article class="project featured" data-category="fintech mlops" data-tags="machine-learning gradient-boosting fastapi fintech-payments multi-objective-optimization scikit-learn docker mlops">
+      <div class="project-head">
+        <div>
+          <div class="project-badge-row">
+            <span class="badge badge-featured">Featured System</span>
+            <span class="badge badge-tech">Cross-Border Payments</span>
+            <span class="badge badge-tech">Dual-Task ML</span>
+          </div>
+          <div class="project-title">RouteFlow AI — Intelligent Cross-Border Payment Routing ML Engine</div>
+        </div>
+        <div class="project-date">Nov 2026 · Featured</div>
+      </div>
+      <p class="project-desc">
+        Production-grade dual-task Machine Learning platform optimizing capital flows across multi-hop correspondent banking networks (Nostro/Vostro accounts), predicting transaction success probabilities and settlement latencies in real time.
+      </p>
+      <div class="project-metrics">
+        <div class="metric-chip"><strong>0.66%</strong> Calibration Error (ECE)</div>
+        <div class="metric-chip"><strong>38.5%</strong> MAE Latency Drop</div>
+        <div class="metric-chip"><strong>0.942</strong> Regressor R&sup2; Score</div>
+        <div class="metric-chip"><strong>&lt;15ms</strong> p95 API Response</div>
+      </div>
+      <ul>
+        <li><strong>Risk-Calibrated Success Prediction (0.66% ECE):</strong> Architected a Platt-calibrated <strong>HistGradientBoostingClassifier</strong> achieving a 0.66% Expected Calibration Error, 0.6980 ROC-AUC, and 0.0761 Brier score on 50,000 multi-corridor transaction records.</li>
+        <li><strong>Sub-Hour Clearing Latency Forecasting (R&sup2; = 0.942):</strong> Slashed Mean Absolute Error (MAE) by <strong>38.5%</strong> (from 113.4m to 69.7m) across timezone cutoffs by engineering a log-transformed <strong>HistGradientBoostingRegressor</strong> with cyclical temporal feature modeling.</li>
+        <li><strong>Automated Capital Routing (&lt;15ms p95 SLA):</strong> Engineered a constrained multi-objective decision engine enforcing strict reliability floors (&ge;85% success) and Pareto utility routing atop a thread-safe Singleton FastAPI serving layer.</li>
+        <li><strong>Drift Prevention &amp; Data Contracts (0.0000 PSI):</strong> Maintained 100% CI/CD pass rates across 26 automated property tests and zero baseline drift by enforcing directional invariance suites and defensive Pydantic v2 data contracts.</li>
+        <li><strong>End-to-End Corridor Observability:</strong> Delivered real-time telemetry and cross-corridor comparative analytics across 5 clearing stages with an embedded interactive corridor walkthrough (/demo).</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Gradient Boosting</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">FinTech Payments</span>
+        <span class="tag">Multi-Objective Optimization</span>
+        <span class="tag">Scikit-Learn</span>
+        <span class="tag">Docker</span>
+        <span class="tag">MLOps</span>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://routeflow-ai.onrender.com/" target="_blank" rel="noopener">Live Demo ↗</a>
+        <a class="btn" href="https://github.com/Prashansa0410/cross-border-payment-routing-ml" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
 
-    <article class="project"><div class="project-head"><div class="project-title">Async Order Processing Platform</div><div class="project-date">In Progress</div></div><p class="project-desc">Production-inspired Java backend demonstrating asynchronous workflows, concurrency and clean backend design for an order processing system.</p><ul>
-      <li><strong>Accomplished non-blocking order lifecycle execution</strong>, as measured by eliminating thread-starvation bottlenecks under simulated traffic spikes, by implementing an asynchronous pipeline utilizing Java <strong>CompletableFuture</strong> (supplyAsync, thenApply, thenAccept).</li>
-      <li><strong>Accomplished robust concurrency guarantees and domain integrity</strong>, as measured by zero race conditions during parallel state updates, by designing an immutable, thread-safe Order domain model and stateless validation layer following SOLID principles.</li>
-    </ul><div class="tags"><span class="tag">Java</span><span class="tag">CompletableFuture</span><span class="tag">Concurrency</span><span class="tag">SOLID</span></div><div class="links"><a class="btn" href="https://github.com/Prashansa0410/async-order-processing-platform" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+    <!-- PROJECT 3: FinDoc-RAG -->
+    <article class="project featured" data-category="agentic fintech" data-tags="rag faiss bm25 cross-encoder qwen2.5 llama-3.1 fastapi docker pytorch nvidia-a100">
+      <div class="project-head">
+        <div>
+          <div class="project-badge-row">
+            <span class="badge badge-featured">Featured System</span>
+            <span class="badge badge-tech">SEC 10-K / 10-Q RAG</span>
+            <span class="badge badge-tech">Cross-Encoder</span>
+          </div>
+          <div class="project-title">FinDoc-RAG — Hybrid Financial RAG &amp; Cross-Encoder Engine</div>
+        </div>
+        <div class="project-date">Nov 2026 · Featured</div>
+      </div>
+      <p class="project-desc">
+        Enterprise-grade, verifiable Retrieval-Augmented Generation (RAG) system specialized for complex corporate SEC financial disclosures (Forms 10-K &amp; 10-Q), evaluated on an NVIDIA A100-80GB GPU.
+      </p>
+      <div class="project-metrics">
+        <div class="metric-chip"><strong>50.0%</strong> Hit@3 Top Retrieval</div>
+        <div class="metric-chip"><strong>10.10ms</strong> Retrieval Latency</div>
+        <div class="metric-chip"><strong>90.0%</strong> Grounded Faithfulness</div>
+        <div class="metric-chip"><strong>100%</strong> Cross-Entity Isolation</div>
+      </div>
+      <ul>
+        <li><strong>High-Precision Financial Disclosure Retrieval (10.10ms):</strong> Attained <strong>40.0% Hit@1</strong> and <strong>50.0% Hit@3</strong> over complex SEC 10-K/10-Q filings by combining <strong>BAAI/bge-small-en-v1.5</strong> dense FAISS vector search with <strong>BM25Okapi</strong> sparse lexical search via Reciprocal Rank Fusion (RRF, k=60).</li>
+        <li><strong>Deep Passage Re-Ranking (60% Rank Shift):</strong> Integrated a <strong>Cross-Encoder (ms-marco-MiniLM-L-6-v2)</strong> performing full query-document cross-attention, elevating true ground-truth disclosures directly to Rank #1.</li>
+        <li><strong>Zero Cross-Company Contamination:</strong> Formulated an entity-aware metadata pre-filtering engine, eliminating 100% of false-positive matches between similarly-named corporate entities.</li>
+        <li><strong>Hallucination-Free Synthesis (90.0% Faithfulness):</strong> Formulated an automated <strong>LLM-as-a-Judge audit (Llama-3.1-8B-Instruct)</strong> on Qwen2.5 outputs with negative abstention guardrails, ensuring 90% grounded factual fidelity.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">RAG</span>
+        <span class="tag">FAISS</span>
+        <span class="tag">BM25</span>
+        <span class="tag">Cross-Encoder</span>
+        <span class="tag">Qwen2.5</span>
+        <span class="tag">Llama-3.1</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Docker</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">NVIDIA A100</span>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://github.com/Prashansa0410/financial-rag-system" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
 
-    <article class="project"><div class="project-head"><div class="project-title">FluxBasis AI</div><div class="project-date">In Progress</div></div><p class="project-desc">Open-source AI-powered CI reliability platform that predicts flaky tests and surfaces explainable ML insights for CI/CD pipelines.</p><ul>
-      <li><strong>Accomplished early detection of non-deterministic CI test failures</strong>, as measured by isolating intermittent failures before deployment, by engineering a modular <strong>Data Collector &rarr; Preprocessor &rarr; ML Engine &rarr; Reporter</strong> pipeline ingesting historical execution telemetry across Selenium, Playwright, Pytest, and TestNG.</li>
-    </ul><div class="tags"><span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">CI/CD</span><span class="tag">Open Source</span></div><div class="links"><a class="btn" href="https://github.com/Prashansa0410/FluxBasis-AI" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+    <!-- PROJECT 4: CrossPay-AI -->
+    <article class="project featured" data-category="agentic fintech" data-tags="slm distilbert flan-t5 rag iso-20022 pytorch streamlit hugging-face">
+      <div class="project-head">
+        <div>
+          <div class="project-badge-row">
+            <span class="badge badge-featured">Featured System</span>
+            <span class="badge badge-tech">ISO 20022 XML Repair</span>
+            <span class="badge badge-tech">SLM Copilot</span>
+          </div>
+          <div class="project-title">CrossPay-AI — Cross-Border Clearing &amp; Exception Copilot</div>
+        </div>
+        <div class="project-date">Nov 2026 · Featured</div>
+      </div>
+      <p class="project-desc">
+        Production-grade Small Language Model (SLM) cognitive copilot for real-time payment exception triage, automated ISO 20022 pacs.028 repair XML synthesis, and multi-corridor regulatory clearing RAG (RBI, Pay.UK, SEPA, NACHA).
+      </p>
+      <div class="project-metrics">
+        <div class="metric-chip"><strong>88.89%</strong> Error Classification</div>
+        <div class="metric-chip"><strong>&lt;15ms</strong> Inference Latency</div>
+        <div class="metric-chip"><strong>100%</strong> ISO Schema Validity</div>
+        <div class="metric-chip"><strong>4</strong> Clearing Frameworks</div>
+      </div>
+      <ul>
+        <li><strong>Real-Time Wire Exception Triage (88.89% Accuracy):</strong> Fine-tuned a <strong>DistilBERT</strong> transformer classifier resolving 10 payment error classes with sub-15ms inference latency across MT103 and pacs.008 correspondent banking payment failure logs.</li>
+        <li><strong>Automated ISO 20022 XML Repair Synthesis:</strong> Generated <strong>100% schema-compliant pacs.028.001.01 XML</strong> repair records with zero hallucinated structural elements by coupling <strong>FLAN-T5-Base</strong> with dynamic schema structural guardrails.</li>
+        <li><strong>Multi-Jurisdiction Regulatory RAG:</strong> Engineered a domain-specialized compliance knowledge engine using <strong>all-MiniLM-L6-v2</strong> embeddings to map sub-second regulatory clauses across RBI, SEPA, Pay.UK, and NACHA mandates.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">SLM</span>
+        <span class="tag">DistilBERT</span>
+        <span class="tag">FLAN-T5</span>
+        <span class="tag">RAG</span>
+        <span class="tag">ISO 20022</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">Streamlit</span>
+        <span class="tag">Hugging Face</span>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://crosspay-ai-copilot.streamlit.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+        <a class="btn" href="https://github.com/Prashansa0410/CrossPay-AI" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
 
-    <article class="project"><div class="project-head"><div class="project-title">Data Pipeline Orchestration with Airflow</div><div class="project-date">In Progress</div></div><p class="project-desc">Apache Airflow project for reliable scheduling and orchestration of data pipelines that can feed downstream ML workflows.</p><ul>
-      <li><strong>Accomplished automated, resilient ETL task execution</strong>, as measured by achieving zero-downtime scheduled batch runs and reproducible containerized execution, by building DAGs using Apache Airflow's <strong>TaskFlow API</strong> with dynamic task mapping and Astronomer CLI tooling.</li>
-    </ul><div class="tags"><span class="tag">Apache Airflow</span><span class="tag">ETL</span><span class="tag">Data Orchestration</span><span class="tag">Docker</span></div><div class="links"><a class="btn" href="https://github.com/Prashansa0410/DAGUsingAirflow" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+    <!-- PROJECT 5: QueryPilot AI -->
+    <article class="project featured" data-category="agentic distributed" data-tags="next.js-15 fastapi llm-routing sql ai-security mcp postgresql">
+      <div class="project-head">
+        <div>
+          <div class="project-badge-row">
+            <span class="badge badge-featured">Featured System</span>
+            <span class="badge badge-tech">AST SQL Security</span>
+            <span class="badge badge-tech">Complexity Router</span>
+          </div>
+          <div class="project-title">QueryPilot AI — Natural Language Database Assistant &amp; Security Router</div>
+        </div>
+        <div class="project-date">Aug 2026 · Featured</div>
+      </div>
+      <p class="project-desc">
+        Enterprise-grade AI database query assistant that translates natural language into SQL, executes real queries, routes requests across models based on complexity and cost, and applies human-in-the-loop governance to risky operations.
+      </p>
+      <div class="project-metrics">
+        <div class="metric-chip"><strong>65.0%</strong> Token Cost Savings</div>
+        <div class="metric-chip"><strong>100%</strong> Destructive Block Rate</div>
+        <div class="metric-chip"><strong>&lt;1s</strong> Query Synthesis</div>
+        <div class="metric-chip"><strong>AST</strong> Syntax Analysis</div>
+      </div>
+      <ul>
+        <li><strong>Semantic LLM Cost Optimization (65% API Spend Reduction):</strong> Architected an intelligent complexity router dispatching routine queries to economical models and complex joins to advanced reasoning models, cutting token spend by ~65%.</li>
+        <li><strong>Deterministic SQL Security Guardrails:</strong> Formulated an AST-based SQL security analysis engine that intercepts 100% of destructive operations (DROP, TRUNCATE, unindexed DELETE) for Human-in-the-Loop authorization.</li>
+        <li><strong>Transparent Observability &amp; Full-Stack Workbench:</strong> Developed a responsive Next.js 15 and FastAPI workbench providing live token consumption, execution latency metrics, and real-time query execution across PostgreSQL and SQLite databases.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Next.js 15</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">LLM Routing</span>
+        <span class="tag">SQL</span>
+        <span class="tag">AI Security</span>
+        <span class="tag">MCP</span>
+        <span class="tag">PostgreSQL</span>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://querypilot-ai-liart.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+        <a class="btn" href="https://github.com/Prashansa0410/querypilot-ai" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
+
+    <!-- PROJECT 6: OpsPulse AI -->
+    <article class="project" data-category="distributed mlops" data-tags="python fastapi next.js ml kafka docker ci/cd duckdb postgresql dbt">
+      <div class="project-head">
+        <div>
+          <div class="project-badge-row">
+            <span class="badge badge-tech">Commerce Intelligence</span>
+            <span class="badge badge-tech">Kafka Streaming</span>
+          </div>
+          <div class="project-title">OpsPulse AI — High-Volume Commerce Operational Intelligence</div>
+        </div>
+        <div class="project-date">Aug 2026</div>
+      </div>
+      <p class="project-desc">
+        AI-powered operational intelligence platform for high-volume commerce, fulfillment and logistics, designed to answer what happened, why it happened, what will happen next and what action to take.
+      </p>
+      <div class="project-metrics">
+        <div class="metric-chip"><strong>11</strong> Real-Time Views</div>
+        <div class="metric-chip"><strong>100%</strong> Read-Only Isolation</div>
+        <div class="metric-chip"><strong>1000s</strong> Daily Stream Events</div>
+        <div class="metric-chip"><strong>&lt;1s</strong> Dashboard Refresh</div>
+      </div>
+      <ul>
+        <li><strong>Proactive SLA Breach Prevention:</strong> Formulated supervised ML risk prediction and explainable root-cause attribution models across fulfillment pipelines, surfacing proactive breach warnings across 11 real-time operational views.</li>
+        <li><strong>Safe Self-Service AI Operational Analytics:</strong> Built an AI Operations Analyst enforcing single-statement execution and strict row limits, ensuring 100% read-only data compliance with zero unauthorized mutations.</li>
+        <li><strong>High-Throughput Streaming Event Pipeline:</strong> Designed a modular streaming data pipeline across Kafka, Parquet, dbt, DuckDB/PostgreSQL, and FastAPI, processing thousands of daily order state changes with sub-second dashboard refreshes.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">Next.js</span>
+        <span class="tag">ML</span>
+        <span class="tag">Kafka</span>
+        <span class="tag">Docker</span>
+        <span class="tag">CI/CD</span>
+        <span class="tag">DuckDB</span>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://opspulse-ai-alpha.vercel.app/" target="_blank" rel="noopener">Live Demo ↗</a>
+        <a class="btn" href="https://github.com/Prashansa0410/opspulse-ai" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
+
+    <!-- PROJECT 7: Async Order Processing Platform -->
+    <article class="project" data-category="distributed fintech" data-tags="java completablefuture concurrency solid thread-safety spring microservices">
+      <div class="project-head">
+        <div>
+          <div class="project-badge-row">
+            <span class="badge badge-tech">High-Concurrency Core</span>
+            <span class="badge badge-tech">Java Concurrency</span>
+          </div>
+          <div class="project-title">Async Order Processing Platform — High-Concurrency Distributed Engine</div>
+        </div>
+        <div class="project-date">In Progress · Core Backend</div>
+      </div>
+      <p class="project-desc">
+        Production-inspired Java backend demonstrating non-blocking asynchronous workflows, multi-threaded concurrency controls, and clean domain design for high-throughput order execution.
+      </p>
+      <div class="project-metrics">
+        <div class="metric-chip"><strong>0</strong> Race Conditions</div>
+        <div class="metric-chip"><strong>100%</strong> Non-Blocking Execution</div>
+        <div class="metric-chip"><strong>Thread-Safe</strong> Domain Design</div>
+        <div class="metric-chip"><strong>SOLID</strong> Modular Pattern</div>
+      </div>
+      <ul>
+        <li><strong>Non-Blocking High-Concurrency Execution:</strong> Eliminated thread-starvation bottlenecks under simulated traffic spikes by architecting an asynchronous pipeline utilizing Java <strong>CompletableFuture</strong> (supplyAsync, thenApply, thenAccept).</li>
+        <li><strong>Thread-Safe Domain Integrity:</strong> Guaranteed zero race conditions during parallel state updates by designing an immutable, thread-safe Order domain model and stateless validation layer following SOLID principles.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Java</span>
+        <span class="tag">CompletableFuture</span>
+        <span class="tag">Concurrency</span>
+        <span class="tag">SOLID</span>
+        <span class="tag">Thread Safety</span>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://github.com/Prashansa0410/async-order-processing-platform" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
+
+    <!-- PROJECT 8: FluxBasis AI -->
+    <article class="project" data-category="mlops distributed" data-tags="python machine-learning ci/cd open-source pytest selenium playwright">
+      <div class="project-head">
+        <div>
+          <div class="project-badge-row">
+            <span class="badge badge-tech">MLOps &amp; Quality</span>
+            <span class="badge badge-tech">Predictive Failure</span>
+          </div>
+          <div class="project-title">FluxBasis AI — Predictive CI Flaky Test &amp; Pipeline Failure Engine</div>
+        </div>
+        <div class="project-date">In Progress · Open Source</div>
+      </div>
+      <p class="project-desc">
+        Open-source AI-powered CI reliability platform that predicts flaky tests and surfaces explainable ML insights for enterprise CI/CD pipelines before code deployment.
+      </p>
+      <div class="project-metrics">
+        <div class="metric-chip"><strong>Early</strong> Flake Isolation</div>
+        <div class="metric-chip"><strong>4</strong> Test Frameworks</div>
+        <div class="metric-chip"><strong>Modular</strong> ML Pipeline</div>
+        <div class="metric-chip"><strong>Open Source</strong> Architecture</div>
+      </div>
+      <ul>
+        <li><strong>Predictive Flaky Test Detection:</strong> Isolated intermittent non-deterministic CI failures prior to production deployment by engineering a modular <strong>Data Collector &rarr; Preprocessor &rarr; ML Engine &rarr; Reporter</strong> pipeline ingesting test telemetry across Selenium, Playwright, Pytest, and TestNG.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">CI/CD</span>
+        <span class="tag">Open Source</span>
+        <span class="tag">Pytest</span>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://github.com/Prashansa0410/FluxBasis-AI" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
+
+    <!-- PROJECT 9: Data Pipeline Orchestration with Airflow -->
+    <article class="project" data-category="mlops distributed" data-tags="apache-airflow etl data-orchestration docker python astronomer-cli">
+      <div class="project-head">
+        <div>
+          <div class="project-badge-row">
+            <span class="badge badge-tech">Data Infrastructure</span>
+            <span class="badge badge-tech">Orchestration</span>
+          </div>
+          <div class="project-title">Data Pipeline Orchestration with Apache Airflow</div>
+        </div>
+        <div class="project-date">In Progress · Data Platform</div>
+      </div>
+      <p class="project-desc">
+        Production-ready Apache Airflow framework for reliable scheduling, dependency management, and orchestration of distributed data pipelines feeding downstream ML workflows.
+      </p>
+      <div class="project-metrics">
+        <div class="metric-chip"><strong>Zero-Downtime</strong> Batch Runs</div>
+        <div class="metric-chip"><strong>TaskFlow API</strong> Modern DAGs</div>
+        <div class="metric-chip"><strong>Astronomer</strong> CLI Containerized</div>
+        <div class="metric-chip"><strong>Automated</strong> Retry Handlers</div>
+      </div>
+      <ul>
+        <li><strong>Automated &amp; Resilient Batch ETL:</strong> Built fault-tolerant DAGs using Apache Airflow's <strong>TaskFlow API</strong> with dynamic task mapping, containerized Astronomer CLI orchestration, and zero-downtime scheduled batch runs feeding downstream ML pipelines.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Apache Airflow</span>
+        <span class="tag">ETL</span>
+        <span class="tag">Data Orchestration</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Astronomer CLI</span>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://github.com/Prashansa0410/DAGUsingAirflow" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
   </section>
 </main>
 </div>
@@ -126,5 +725,127 @@ function show(id){const target=document.getElementById(id);if(!target)return;lin
 links.forEach(link=>link.addEventListener('click',e=>{e.preventDefault();show(link.dataset.target)}));
 window.addEventListener('DOMContentLoaded',()=>{const id=location.hash.slice(1);show(id&&document.getElementById(id)?id:'about')});
 </script>
+
+<script>
+// ========================================================
+// INTERACTIVE ENGINEERING LIBRARY CONTROLLER
+// ========================================================
+(function() {
+  const searchInput = document.getElementById('projectSearch');
+  const searchClear = document.getElementById('searchClear');
+  const filterTabs = document.querySelectorAll('.lib-tab');
+  const projectCards = document.querySelectorAll('#projects .project');
+  const counterEl = document.getElementById('projectCounter');
+  const emptyStateEl = document.getElementById('libraryEmpty');
+  const resetBtn = document.getElementById('resetFiltersBtn');
+  const tags = document.querySelectorAll('#projects .tag');
+
+  let currentCategory = 'all';
+  let searchQuery = '';
+  const totalCount = projectCards.length;
+
+  function filterProjects() {
+    let visibleCount = 0;
+    const q = searchQuery.toLowerCase().trim();
+
+    projectCards.forEach(card => {
+      const categoryMatch = currentCategory === 'all' || 
+        (card.dataset.category && card.dataset.category.includes(currentCategory));
+      
+      const cardText = card.textContent.toLowerCase();
+      const tagsText = (card.dataset.tags || '').toLowerCase();
+      const searchMatch = !q || cardText.includes(q) || tagsText.includes(q);
+
+      if (categoryMatch && searchMatch) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    // Update Counter
+    if (counterEl) {
+      counterEl.innerHTML = `Showing <strong>${visibleCount}</strong> of <strong>${totalCount}</strong> systems`;
+    }
+
+    // Toggle Empty State
+    if (emptyStateEl) {
+      emptyStateEl.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    // Toggle Clear Search Button
+    if (searchClear) {
+      searchClear.style.display = q ? 'block' : 'none';
+    }
+  }
+
+  // Category Tab Click Handler
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      filterTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentCategory = tab.dataset.filter;
+      filterProjects();
+    });
+  });
+
+  // Search Input Handler (Debounced)
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      filterProjects();
+    });
+
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        searchInput.value = '';
+        searchQuery = '';
+        filterProjects();
+      }
+    });
+  }
+
+  // Clear Search Button Handler
+  if (searchClear) {
+    searchClear.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      searchQuery = '';
+      filterProjects();
+      if (searchInput) searchInput.focus();
+    });
+  }
+
+  // Reset Button Handler
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      searchQuery = '';
+      currentCategory = 'all';
+      filterTabs.forEach(t => t.classList.toggle('active', t.dataset.filter === 'all'));
+      tags.forEach(t => t.classList.remove('active-tag'));
+      filterProjects();
+    });
+  }
+
+  // Clickable Tags for Quick Filtering
+  tags.forEach(tag => {
+    tag.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const tagText = tag.textContent.trim();
+      if (searchInput) {
+        searchInput.value = tagText;
+        searchQuery = tagText;
+        filterProjects();
+        searchInput.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  });
+
+  // Initial Run
+  filterProjects();
+})();
+</script>
+
 </body>
 </html>
