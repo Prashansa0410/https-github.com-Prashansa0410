@@ -11,6 +11,7 @@ Personal portfolio website showcasing distributed systems architecture, applied 
 - **[CrossPay-AI](https://github.com/Prashansa0410/CrossPay-AI)** (Nov 2026 · Featured)
   - Production-grade Small Language Model (SLM) cognitive copilot for cross-border payment exception triage, automated ISO 20022 `pacs.028` repair XML generation, and multi-corridor regulatory clearing RAG (RBI, Pay.UK, SEPA, NACHA).
   - *Tech*: DistilBERT (88.89% accuracy, 14.2ms latency), FLAN-T5-Base, sentence-transformers RAG, PyTorch, Streamlit.
+  - *Links*: [Live Demo ↗](https://crosspay-ai-copilot.streamlit.app/) · [GitHub Repo ↗](https://github.com/Prashansa0410/CrossPay-AI)
 
 - **[QueryPilot AI](https://github.com/Prashansa0410/querypilot-ai)** (Aug 2026 · Featured)
   - Cost-aware multi-model LLM router for database querying with deterministic SQL security interception and human-in-the-loop governance.
