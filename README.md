@@ -8,6 +8,13 @@ Personal portfolio website showcasing distributed systems architecture, applied 
 
 ## 🚀 Featured Projects
 
+- **[RouteFlow AI](https://github.com/Prashansa0410/cross-border-payment-routing-ml)** (Nov 2026 · Featured)
+  - Production-grade dual-task Machine Learning platform optimizing capital routing across multi-hop correspondent banking networks (Nostro/Vostro accounts), predicting settlement success and clearing latency in real time.
+  - Combines a Platt-calibrated `HistGradientBoostingClassifier` (0.66% Expected Calibration Error, 0.6980 ROC-AUC) and a log-transformed `HistGradientBoostingRegressor` ($R^2 = 0.942$, reducing MAE by 38.5% over historical baselines).
+  - Features an automated multi-objective decision engine enforcing strict SLA constraints (min 85% success floor) and Pareto utility scoring, coupled with a 5-stage interactive corridor pipeline UI and sub-15ms FastAPI REST serving.
+  - *Tech*: Python, Scikit-learn, HistGradientBoosting, FastAPI, Pydantic v2, Docker, Multi-Objective Optimization.
+  - *Links*: [GitHub Repo ↗](https://github.com/Prashansa0410/cross-border-payment-routing-ml)
+
 - **[FinDoc-RAG](https://github.com/Prashansa0410/financial-rag-system)** (Nov 2026 · Featured)
   - Enterprise-grade, verifiable Retrieval-Augmented Generation (RAG) system specialized for complex corporate SEC filings (Forms 10-K & 10-Q), evaluated on an NVIDIA A100-80GB GPU at BITS Pilani.
   - Combines dense vector search (`BAAI/bge-small-en-v1.5` + FAISS), sparse keyword search (`BM25Okapi`), Reciprocal Rank Fusion ($k=60$), Cross-Encoder reranking (`ms-marco-MiniLM-L-6-v2`), and entity pre-filtering with automated LLM-as-a-Judge audits (90% grounded faithfulness).
