@@ -8,6 +8,12 @@ Personal portfolio website showcasing distributed systems architecture, applied 
 
 ## 🚀 Featured Projects
 
+- **[FinDoc-RAG](https://github.com/Prashansa0410/financial-rag-system)** (Nov 2026 · Featured)
+  - Enterprise-grade, verifiable Retrieval-Augmented Generation (RAG) system specialized for complex corporate SEC filings (Forms 10-K & 10-Q), evaluated on an NVIDIA A100-80GB GPU at BITS Pilani.
+  - Combines dense vector search (`BAAI/bge-small-en-v1.5` + FAISS), sparse keyword search (`BM25Okapi`), Reciprocal Rank Fusion ($k=60$), Cross-Encoder reranking (`ms-marco-MiniLM-L-6-v2`), and entity pre-filtering with automated LLM-as-a-Judge audits (90% grounded faithfulness).
+  - *Tech*: PyTorch, FAISS, BM25, Cross-Encoder, Qwen2.5-7B, Llama-3.1-8B Judge, FastAPI, Docker, NVIDIA A100.
+  - *Links*: [GitHub Repo ↗](https://github.com/Prashansa0410/financial-rag-system)
+
 - **[CrossPay-AI](https://github.com/Prashansa0410/CrossPay-AI)** (Nov 2026 · Featured)
   - Production-grade Small Language Model (SLM) cognitive copilot for cross-border payment exception triage, automated ISO 20022 `pacs.028` repair XML generation, and multi-corridor regulatory clearing RAG (RBI, Pay.UK, SEPA, NACHA).
   - *Tech*: DistilBERT (88.89% accuracy, 14.2ms latency), FLAN-T5-Base, sentence-transformers RAG, PyTorch, Streamlit.
